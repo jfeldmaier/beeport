@@ -1,0 +1,14 @@
+<!-- stoecke/templates/stoecke/stock_home.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Alle Bienenstoecke</h2>
+<ul>
+	    {% for stock in object_list %}
+	        <li><a href="#">{{ stock.name }} {{ stock.id }}</a></li>
+		    {% endfor %}
+</ul>
+<a class="btn btn-success btn-sm" href="#">+ Neuen Stock hinzufügen</a>
+{% endblock content %}
+
